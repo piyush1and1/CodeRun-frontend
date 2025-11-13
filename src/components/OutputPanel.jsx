@@ -1,10 +1,9 @@
 import React from "react";
 
 function OutputPanel({ output, error, isLoading }) {
-  // Determine content and style dynamically
   let content = "Click \"Run\" to see the output.";
-  let stateColor = "text-gray-700"; // Default text color
-  let glow = "shadow-[inset_0_0_10px_rgba(255,255,255,0.1)]"; // Subtle inner glow
+  let stateColor = "text-gray-700"; 
+  let glow = "shadow-[inset_0_0_10px_rgba(255,255,255,0.1)]"; 
 
   if (isLoading) {
     content = "⏳ Executing...";
@@ -25,7 +24,6 @@ function OutputPanel({ output, error, isLoading }) {
         Output:
       </h3>
 
-      {/* Glass Output Box */}
       <pre
         className={`w-full h-[300px] rounded-xl p-4 font-mono text-sm overflow-y-auto whitespace-pre-wrap 
           bg-white/20 border border-white/30 backdrop-blur-xl 
@@ -34,7 +32,6 @@ function OutputPanel({ output, error, isLoading }) {
         {content}
       </pre>
 
-      {/* Custom scrollbar and effect */}
       <style>{`
         pre::-webkit-scrollbar {
           width: 8px;

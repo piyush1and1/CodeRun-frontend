@@ -4,9 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { logout } from '../api/auth';
 import toast, { Toaster } from 'react-hot-toast';
 
-/**
- * Fixed Navbar with Glassmorphism Design + Real Functionality
- */
+
 function Navbar({ user, setUser }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -49,11 +47,9 @@ function Navbar({ user, setUser }) {
   return (
     <>
       <Toaster />
-      {/* ✅ Fixed Navbar */}
       <nav className="fixed top-0 left-0 w-full z-[1000] border-b border-white/20 bg-white/40 shadow-sm backdrop-blur-lg">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
-            {/* Logo */}
             <div className="flex-shrink-0">
               <button
                 onClick={() => navigate('/')}

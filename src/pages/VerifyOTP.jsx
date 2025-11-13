@@ -41,7 +41,6 @@ export default function VerifyOTP({ setUser }) {
     <>
       <Toaster position="top-center" />
 
-      {/* --- Tailwind animation styles --- */}
       <style>{`
         @keyframes gradientMove {
           0% { background-position: 0% 50%; }
@@ -73,13 +72,10 @@ export default function VerifyOTP({ setUser }) {
           overflow: hidden;
       `}</style>
 
-      {/* --- Full Screen Gradient Background --- */}
       <div className="animated-bg fixed inset-0 flex justify-center items-center h-screen bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-600 overflow-hidden">
-        {/* Decorative blobs */}
         <div className="absolute top-20 -left-20 w-72 h-72 bg-yellow-300 rounded-full opacity-80 blur-3xl animate-blob-1"></div>
         <div className="absolute bottom-20 -right-20 w-80 h-80 bg-teal-300 rounded-full opacity-70 blur-3xl animate-blob-2"></div>
 
-        {/* --- Glassmorphism Card --- */}
         <div className="relative z-10 max-w-md w-full mx-auto p-8 bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl border border-white/20">
           <h2 className="text-3xl font-bold text-center text-white mb-4">
             Verify OTP

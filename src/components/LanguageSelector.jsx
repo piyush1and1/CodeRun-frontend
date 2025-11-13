@@ -13,7 +13,6 @@ function LanguageSelector({ language, onSelectLanguage }) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  // Close when clicking outside
   useEffect(() => {
     function handleClickOutside(e) {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -29,9 +28,7 @@ function LanguageSelector({ language, onSelectLanguage }) {
 
   return (
     <div className="relative inline-block text-left w-60" ref={dropdownRef}>
-      {/*<label className="block text-lg font-semibold text-gray-800 mb-2">Language:</label>*/}
 
-      {/* Selected box */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`flex items-center justify-between w-full rounded-xl px-4 py-2 bg-white/20 
@@ -51,7 +48,6 @@ function LanguageSelector({ language, onSelectLanguage }) {
         </span>
       </button>
 
-      {/* Dropdown list */}
       {isOpen && (
         <div
           className="absolute left-0 right-0 mt-2 bg-white/20 backdrop-blur-2xl border border-white/30 
@@ -76,7 +72,6 @@ function LanguageSelector({ language, onSelectLanguage }) {
         </div>
       )}
 
-      {/* Smooth fade-in animation */}
       <style>{`
         @keyframes fadeIn {
           0% { opacity: 0; transform: translateY(-6px); }

@@ -15,9 +15,7 @@ import Profile from './pages/Profile';
 import TypingLoader from './components/TypingLoader.jsx';
 
 function App() {
-  // This state holds the authenticated user object or null
   const [user, setUser] = useState(null);
-  // This state prevents the app from rendering before we know if we're logged in
   const [loading, setLoading] = useState(true);
 
   // On initial app load, check if we're already logged in (via cookie)

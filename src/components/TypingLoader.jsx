@@ -10,7 +10,6 @@ export default function TypingLoader() {
 
   return (
     <>
-      {/* Inline Styles for CSS Animations */}
       <style>
         {`
           /* Line fade-in + upward motion */

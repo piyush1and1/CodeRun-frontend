@@ -23,7 +23,6 @@ function Profile({ user }) {
   const [selectedSnippet, setSelectedSnippet] = useState(null);
   const [modalLoading, setModalLoading] = useState(false);
 
-  // Fetch all snippet metadata
   useEffect(() => {
     async function fetchSnippets() {
       try {
@@ -38,10 +37,8 @@ function Profile({ user }) {
     fetchSnippets();
   }, []);
 
-  // Extract username from email
   const username = user?.email ? user.email.split('@')[0] : 'User';
 
-  // Fetch full snippet when clicked
   const handleSnippetClick = async (snippetId) => {
     try {
       setModalLoading(true);
@@ -54,7 +51,6 @@ function Profile({ user }) {
     }
   };
 
-  // Copy code to clipboard
   const copyCode = async (code) => {
     try {
       await navigator.clipboard.writeText(code);
@@ -66,8 +62,7 @@ function Profile({ user }) {
 
   return (
     <>
-      {/* Prevent global scroll */}
-      
+    
 
       {/* Fullscreen layout */}
       <div className="animated-gradient-bg fixed inset-0 flex flex-col justify-start items-center text-gray-900 pt-[6rem] overflow-hidden">
@@ -163,7 +158,6 @@ function Profile({ user }) {
           </div>
         )}
 
-        {/* Background Animation CSS */}
         <style>{`
           @keyframes animated-gradient {
             0% { background-position: 0% 50%; }

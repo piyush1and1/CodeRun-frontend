@@ -8,9 +8,7 @@ import InputBox from "../components/InputBox";
 import OutputPanel from "../components/OutputPanel";
 import { Play, Save } from "lucide-react";
 
-/**
- * Modern, Glassy, Responsive Editor Page
- */
+
 function Editor() {
   const [language, setLanguage] = useState("javascript");
   const [code, setCode] = useState("// Welcome to CodeRun!\n");
@@ -58,7 +56,6 @@ function Editor() {
 
   return (
     <>
-      {/* Animated Gradient Background */}
       <style>{`
         @keyframes gradientMove {
           0% { background-position: 0% 50%; }
@@ -75,11 +72,10 @@ function Editor() {
         }
       `}</style>
 
-      {/* Full-screen container */}
 <div
   className="editor-bg fixed inset-0 p-6 md:p-16 flex flex-col md:flex-row gap-6 backdrop-blur-xl overflow-hidden"
   style={{
-    paddingTop: "90px", // 👈 pushes content slightly below navbar
+    paddingTop: "90px", // adjust if you have a navbar
   }}
 >
 

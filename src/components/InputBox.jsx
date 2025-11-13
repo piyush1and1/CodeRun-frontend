@@ -8,7 +8,6 @@ function InputBox({ value, onChange }) {
         Input <span className="text-gray-500 text-sm">(stdin):</span>
       </h3>
 
-      {/* Glass textarea */}
       <textarea
         value={value}
         onChange={(e) => onChange(e.target.value)}
@@ -19,7 +18,6 @@ function InputBox({ value, onChange }) {
                    focus:outline-none focus:ring-2 focus:ring-purple-400 focus:bg-white/30"
       ></textarea>
 
-      {/* Internal glow hover animation */}
       <style>{`
         textarea::-webkit-scrollbar {
           width: 8px;

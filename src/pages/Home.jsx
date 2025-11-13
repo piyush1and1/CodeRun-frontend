@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaNodeJs, FaPython, FaJava, FaJsSquare } from "react-icons/fa";
 
-/* --- Animation and Global Styles --- */
 const AnimationStyles = () => (
   <style>{`
     @keyframes float-1 {
@@ -48,15 +47,13 @@ const AnimationStyles = () => (
   `}</style>
 );
 
-/* --- Home Page Component --- */
 export default function Home() {
-  const NAV_HEIGHT = 0; // match your navbar height
+  const NAV_HEIGHT = 0;
 
   return (
     <>
       <AnimationStyles />
 
-      {/* Gradient Background - fixed below navbar */}
       <div
         className="fixed left-0 right-0 bottom-0 flex flex-col justify-center items-center text-center overflow-hidden"
         style={{
@@ -65,7 +62,6 @@ export default function Home() {
           background: "linear-gradient(135deg, #FFD1DC, #E0BBE4, #C2E9FB)",
         }}
       >
-        {/* Floating Animated Icons */}
         <div
           className="animate-float-1 absolute flex items-center justify-center rounded-full bg-white/60 w-24 h-24 top-1/4 left-1/4"
           style={{ animationDelay: "-1s" }}
@@ -94,7 +90,6 @@ export default function Home() {
           <FaNodeJs className="text-[#68A063] text-5xl" />
         </div>
 
-        {/* Glassmorphism Card */}
         <div className="relative z-20 bg-white/20 backdrop-blur-lg rounded-2xl shadow-2xl p-8 md:p-12 max-w-3xl border border-white/30">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight text-gray-900">
             Welcome to CodeRun!

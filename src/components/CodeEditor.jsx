@@ -24,7 +24,6 @@ function CodeEditor({ language, code, onChange }) {
         boxShadow: "0 8px 32px rgba(31, 38, 135, 0.2)",
       }}
     >
-      {/* Decorative gradient border (optional aesthetic touch) */}
       <div
         className="absolute inset-0 pointer-events-none rounded-2xl"
         style={{
@@ -39,7 +38,6 @@ function CodeEditor({ language, code, onChange }) {
         }}
       ></div>
 
-      {/* Monaco Editor */}
       <Editor
         height="60vh"
         width="100%"
