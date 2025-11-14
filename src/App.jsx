@@ -42,6 +42,7 @@ function App() {
     <>
       {/* Pass user state to Navbar so it can show correct links */}
       <Navbar user={user} setUser={setUser} />
+      <Toaster position="top-center" />
       
       {/* Main content area */}
       <div className="page-container">

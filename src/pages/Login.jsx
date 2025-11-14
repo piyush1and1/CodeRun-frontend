@@ -13,7 +13,7 @@ export default function Login() {
     setLoading(true);
     try {
       await requestOTP(email);
-      toast.success('OTP sent to your email!');
+      toast.success('OTP sent to your email!', { duration: 2000 });
       navigate('/verify-otp', { state: { email } });
     } catch (error) {
       toast.error(error.response?.data?.message || 'Failed to send OTP');
@@ -24,7 +24,6 @@ export default function Login() {
 
   return (
     <>
-      <Toaster position="top-center" />
 
       <style>{`
         @keyframes gradientMove {
@@ -52,11 +51,7 @@ export default function Login() {
         .animate-blob-1 { animation: blobMove1 8s ease infinite; }
         .animate-blob-2 { animation: blobMove2 7s ease infinite 2s; }
 
-        /* Prevent scrolling and fix viewport */
-        html, body {
-          height: 100%;
-          overflow: hidden;
-        }
+        
       `}</style>
 
       <div className="animated-bg fixed inset-0 flex justify-center items-center bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-600">

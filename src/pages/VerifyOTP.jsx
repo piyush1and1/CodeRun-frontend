@@ -39,7 +39,6 @@ export default function VerifyOTP({ setUser }) {
 
   return (
     <>
-      <Toaster position="top-center" />
 
       <style>{`
         @keyframes gradientMove {
