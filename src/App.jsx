@@ -4,7 +4,7 @@ import { Toaster } from 'react-hot-toast';
 import { getProfile } from './api/user';
 
 // Components
-import Navbar from './components/navbar.jsx';
+import Navbar from './components/Navbar.jsx';
 
 // Pages
 import Home from './pages/Home';
